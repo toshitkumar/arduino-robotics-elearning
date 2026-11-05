@@ -11,18 +11,20 @@ import {
   FolderDown, 
   ChevronRight,
   Shield,
-  Award
+  Award,
+  Layers
 } from 'lucide-react';
 import { playClickSound } from '../utils/audioEffects';
 
 export default function Sidebar({ activeTab, setActiveTab, activeModule, setActiveModule, progress }) {
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
+    { id: 'storyline-player', label: 'Storyline PPT Player', icon: Layers, badge: '17 Slides', highlight: true },
     { id: 'modules', label: 'Learning Modules', icon: BookOpen, badge: '5+1' },
     { id: 'components', label: 'Component Explorer', icon: Cpu },
     { id: 'circuit-lab', label: 'Circuit Lab (Wiring)', icon: Cable },
     { id: 'code-playground', label: 'Code Playground', icon: Terminal },
-    { id: 'flood-sim', label: 'Flood Simulation', icon: Waves, highlight: true },
+    { id: 'flood-sim', label: 'Flood Simulation', icon: Waves },
     { id: 'scenarios', label: 'Scenario Exercises', icon: Shield, badge: '5' },
     { id: 'assessment', label: 'Assessment Center', icon: CheckSquare, badge: '60 MCQs' },
     { id: 'certificate', label: 'Course Certificate', icon: Award },

@@ -11,6 +11,7 @@ import ScenarioExercises from './components/ScenarioExercises';
 import AssessmentCenter from './components/AssessmentCenter';
 import PdfDocumentation from './components/PdfDocumentation';
 import Resources from './components/Resources';
+import StorylinePlayer from './components/StorylinePlayer';
 
 import { 
   getStoredData, 
@@ -102,6 +103,8 @@ export default function App() {
               progress={progress}
             />
           )}
+
+          {activeTab === 'storyline-player' && <StorylinePlayer />}
 
           {activeTab === 'modules' && (
             <ModuleViewer

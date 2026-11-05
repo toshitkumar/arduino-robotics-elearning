@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/generatePdfFile.js",
+    "prebuild": "node scripts/generatePdfFile.js && python scripts/generate_storyline_ppt.py",
     "build": "vite build",
     "deploy": "gh-pages -d dist",
     "lint": "oxlint",

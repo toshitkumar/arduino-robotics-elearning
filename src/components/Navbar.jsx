@@ -54,6 +54,22 @@ export default function Navbar({ activeTab, setActiveTab, progress }) {
             </div>
           </div>
 
+          {/* Storyline PPT Button */}
+          <button
+            onClick={() => {
+              playClickSound();
+              setActiveTab('storyline-player');
+            }}
+            className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all cursor-pointer ${
+              activeTab === 'storyline-player'
+                ? 'bg-cyan-500 text-slate-950 border-cyan-400 font-bold'
+                : 'bg-cyan-950/40 text-cyan-400 border-cyan-800/50 hover:bg-cyan-900/40'
+            }`}
+            title="Open Interactive Articulate Storyline PPT Player"
+          >
+            <span>Storyline PPT</span>
+          </button>
+
           {/* Download PDF button */}
           <button
             onClick={() => {
